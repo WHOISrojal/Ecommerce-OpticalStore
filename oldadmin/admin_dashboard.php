@@ -2,7 +2,7 @@
 session_start();
 
 // Check if the admin is not logged in
-if (!isset($_SESSION['username']) || $_SESSION['user_type'] !== 'admin') {
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
     header("Location: admin_login.php");
     exit();
 }

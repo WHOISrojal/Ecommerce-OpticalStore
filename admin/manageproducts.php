@@ -1,30 +1,81 @@
 <?php
 session_start();
+include '../connection.php';
+include 'header.php'; 
+include 'sidebar.php'; 
 
-// Check if the admin is not logged in
-if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header("Location: admin_login.php");
+
+// Check if the admin or user is not logged in
+if (!isset($_SESSION['username']) || ($_SESSION['user_type'] !== 'admin' && !$_SESSION['isloggedin'])) {
+    header("Location: ../login.php");
     exit();
 }
 
-// Add database connection code
-include 'connection.php';
+// Function to display an error message
+function displayError($message)
+{
+    echo "<p style='color: red;'>Error: $message</p>";
+}
 
 // Fetch products from the database
 $sql = "SELECT * FROM products";
 $result = $con->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo "Product ID: " . $row["product_id"] . "<br>";
-        echo "Product Name: " . $row["product_name"] . "<br>";
-        echo "Description: " . $row["description"] . "<br>";
-        echo "Price: $" . $row["price"] . "<br>";
-        echo "<a href='edit_product.php?id=" . $row["product_id"] . "'>Edit</a> | ";
-        echo "<a href='delete_product.php?id=" . $row["product_id"] . "'>Delete</a><br><br>";
-        // Add more fields as needed
-    }
+if ($result === false) {
+    displayError("Error in fetching products: " . $con->error);
 } else {
-    echo "No products found.";
+    if ($result->num_rows > 0) {
+        echo '<main class="main-content">';
+        echo '<section class="customer-title">';
+        echo '<h2 class="customer-tag">Manage Products</h2>';
+        echo "<table class='manage-table table-bordered table-striped'>";
+        echo "<thead>";
+        echo "<tr>";
+        echo "<th class='th-id'>Product ID</th>";
+        echo "<th class='th-name'>Product Name</th>";
+        echo "<th class='th-description'>Description</th>";
+        echo "<th class='th-price'>Price</th>";
+        echo "<th class='th-actions'>Actions</th>";
+        echo "</tr>";
+        echo "</thead>";
+        echo "<tbody>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo '<tr>';
+            echo '<td>' . $row["id"] . "<br>";
+            echo '<td>' . $row["name"] . "<br>";
+            echo '<td>' . $row["description"] . "<br>";
+            echo '<td>' . $row["price"] . "<br>";
+            echo "<td>";
+            echo "<a href='update_product.php?action=edit&id=" . $row["id"] . "'>Edit</a> | ";
+            echo "<a href='delete_product.php?id=" . $row["id"] . "'>Delete</a><br><br>";
+            echo "</td>";
+            echo "</tr>";
+            // Add more fields as needed
+        }
+        echo "</tbody>";
+        echo "</table>";
+    } else {
+        echo "No products found.";
+    }
 }
+
+
+
+// Close the database connection
+$con->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="astyle.css">
+</head>
+<body>
+   
+</body>
+</html>
+

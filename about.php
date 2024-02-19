@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'cartCount.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,15 +17,13 @@ session_start();
         <a href="index.php"><img src="image/logo/logo.png" class="logo" alt="This is a logo"></a>
         <div>
             <ul id="navbar">
-                <div class="searchbar">
-                <li id="lg-search"><input type="text" placeholder="Search for products" class="search-box" style="height: 4vh; width: 25vw; padding: 8px; border:none; border-radius: 10px; margin-right: 10px;"><a href="#"><i class="bi bi-search"></i></a></li>
-                </div>
+                <?php include 'searchbtn.php' ?>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a class="active" href="about.php">About us</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <!-- <input type="search" id="q" name="q" placeholder="Search in Daraz" class="search-box__input--O34g" tabindex="1" value=""> -->
-                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li>
+                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>($totalCartCount)</p>"; ?>
                 <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>";?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
@@ -44,12 +43,12 @@ session_start();
         <img src="image/about/a6.jpg" alt="">
         <div>
             <h2>Who are we?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, consequuntur.</p>
-            <abbr title="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat.</abbr>
+            <p>Reshmi Optical Center</p>
+            <abbr title="">Reshmi Optical Center</abbr>
 
             <br>
 
-            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, voluptas!</marquee>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Reshmi Optical Center</marquee>
         </div>
     </section>
 

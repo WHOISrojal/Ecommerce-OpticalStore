@@ -83,9 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="index.php"><img src="image/logo/logo.png" class="logo" alt="This is a logo"></a>
         <div>
             <ul id="navbar">
-                <div class="searchbar">
-                <li id="lg-search"><input type="text" placeholder="Search for products" class="search-box" style="height: 4vh; width: 25vw; padding: 8px; border:none; border-radius: 10px; margin-right: 10px;"><a href="#"><i class="bi bi-search"></i></a></li>
-                </div>
+                <?php include 'searchbtn.php' ?>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="about.php">About us</a></li>
@@ -137,7 +135,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" name="address" required><br>
 
         <input type="submit" value="Register">
-        <a href="login.php">Back to Login Page</a>
     </form>
 </section>
 

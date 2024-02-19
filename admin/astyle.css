@@ -1,0 +1,253 @@
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #33D7FD;
+    border-bottom: 1px solid #ddd;
+}
+.main-header .title a{
+    list-style: none;
+    text-decoration: none;
+} 
+.main-header .title .logo img{
+    width: 40px;
+} 
+.sidebar {
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 15%;
+    background-color: #3C4B64;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    height: 85vh;
+}
+.nav-item {
+    width: 100%;
+    background-color: #F2F2F2;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: 700;
+}
+.nav-item a {
+    display: block;
+    text-decoration: none;
+    color: #50453F;
+}
+.nav-item a:hover,
+.nav-item:hover{
+    background-color: #E3E6F3;
+    color: #0099ff;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    padding: 20px;
+    
+}
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.metric {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #FF9196;
+}
+.metric1 {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #67B4F2;
+}
+.metric2 {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #41D3BF;
+}
+.metric h3{
+    font-size: larger;
+}
+.metric1 h3{
+    font-size: larger;
+}
+.metric2 h3{
+    font-size: larger;
+}
+
+.metric-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.metric-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+.user-info {
+    display: flex;
+}
+
+/* add products */
+#addproduct-form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+}
+#addproduct-form form{
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 60%;
+}
+  
+#addproduct-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+#addproduct-form input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+#addproduct-form form .submit-btn{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+#addproduct-form form .submit-btn:hover{
+    background-color: #0099ff;
+    transition: 0.5s ease;
+}
+
+#addproduct-form h2,
+.title-bar{
+    /* justify-content: center; */
+    background-color: #EADACB;
+    width: 45vw;
+    text-align: center;
+}
+
+/* customer table */
+.customer-title{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+.customer-title .customer-tag{
+    /* justify-content: center; */
+    background-color: #EADACB;
+    width: 70vw;
+    height: 5vh;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: -40px;
+}
+table {
+    /* Center the table horizontally */
+    margin: -15px;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse; /* Ensure borders don't overlap */
+    width: 100%; /* Adjust width as needed */
+    /* padding: 20px; */
+  }
+  
+  thead th {
+    background-color: #EADACB;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Add borders to all header cells */
+  }
+  
+  td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Add borders to all data cells */
+  }
+  
+  /* Optional: Remove borders at the beginning and end of rows */
+  .table-bordered td:first-child,
+  .table-bordered th:first-child {
+    border-left: 1;
+  }
+  
+  .table-bordered td:last-child,
+  .table-bordered th:last-child {
+    border-right: 1;
+  }
+  
+  /* Additional styling based on the image (adjust as needed): */
+  
+  th {
+    font-weight: bold; /* Make header text bold */
+  }
+  
+  .user-type {
+    text-align: center; /* Center text in the "User Type" column */
+  }
+  /* manage products */
+  .manage-table {
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the table */
+  }
+  
+  .manage-table thead th {
+    background-color: #EADACB;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .manage-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .manage-table .th-id, .th-price {
+    text-align: center; /* Align specific columns */
+  }
+  

@@ -1,6 +1,6 @@
 <footer class="section-p1">
         <div class="col">
-            <img src="image/logo/logo.png" alt="">
+            <img src="image/logo/logo.png" alt="Reshmi Optical Center">
             <h4>Contact</h4>
             <p><strong>Address: </strong> Bagmati-3, Kathmandu</p>
             <p><strong>Phone: </strong> +977-9812345678</p>

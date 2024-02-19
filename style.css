@@ -39,6 +39,35 @@ p{
 body{
     width: 100%;
 }
+/* .cart-count p{
+    top: 40px; 
+    right: 10px; 
+    padding: 10px;
+} */
+/* search button */
+.search-form {
+    height: 5vh;
+    width: 25vw;
+    padding: 8px;
+    margin-right: 5px;
+    display: flex;
+}
+.search-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+.search-button {
+    background-color: #088178;
+    color: #fff;
+    height: 100%;
+    width: 2vw;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
 /* all header like nav  */
 #header{
     display: flex;
@@ -82,8 +111,8 @@ body{
     background: #088178;
     position: absolute;
     bottom: -4px;
-    left: 20px;
-} */
+    left: 20px; 
+}*/
 #mobile{
     display: none;
     align-items: center;
@@ -96,6 +125,15 @@ body{
     font-size: 16px;
     border: 1px solid black;
 } */
+/* .search-label{
+    height: 40vh;
+    width: 50vw;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid black;
+} */
+/* Styles for the search form */
+
 /* index page front image */
 #frontimg{
     background-image: url("image/about/bannerss.jpg");
@@ -131,9 +169,9 @@ body{
 #feature{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-}
+} 
 #feature .fe-box{
     width: 180px;
     text-align: center;
@@ -498,7 +536,7 @@ footer .copyright{
     padding-bottom: 10px;
 }
 #login-form form{
-    width: 65%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -531,7 +569,7 @@ footer .copyright{
     padding-bottom: 10px;
 }
 #register-form form{
-    width: 65%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -551,6 +589,9 @@ footer .copyright{
     border-radius: 5px;
 }
 /* cart page */
+#cart{
+    overflow-x: auto;
+}
 #cart table{
     width: 100%;
     border-collapse: collapse;
@@ -561,6 +602,89 @@ footer .copyright{
     width: 70px;
     height: auto;
 }
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;;
+}
+#cart table thead{
+    border: 1px solid #E2E9E1;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 13px;
+}
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#coupon{
+    padding-bottom: 15px;
+}
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+#coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+#coupon button,
+#subtotal button{
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e2;
+    padding: 30px;
+}
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+
 /* Media Query for ipads*/
 @media (max-width:799px){
     .section-p1 {
@@ -630,6 +754,13 @@ footer .copyright{
     }
     #form-details form{
         width: 50%;
+    }
+    .search-form {
+        height: 6vh;
+        width: 100%;
+    }
+    .search-button {
+        width: 20%;
     }
 }
 /* Media Query for small sized phones like iphone X*/
@@ -715,7 +846,7 @@ footer .copyright{
         flex-wrap: wrap;
     }
     #login-form form {
-        width: 100%;
+        width:90%;
         margin-bottom: 30px;
     }
     #register-form {
@@ -724,7 +855,25 @@ footer .copyright{
         flex-wrap: wrap;
     }
     #register-form form {
-        width: 100%;
+        width: 90%;
         margin-bottom: 30px;
+    }
+    /* cart page */
+    /* #cart-add{
+        flex-direction: column;
+    } 
+    #coupon{
+        width: 100%;
+    } */
+    #subtotal{
+        width: 100%;
+        padding: 20px;
+    }
+    .search-form {
+        height: 8vh;
+        width: 100%;
+    }
+    .search-button {
+        width: 20%;
     }
 }

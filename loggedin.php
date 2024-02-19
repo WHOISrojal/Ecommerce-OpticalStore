@@ -70,45 +70,51 @@
 
 <?php 
 
+
 include 'connection.php';
 
 // Initialize the welcome message variable
 $welcomeMessage = '';
 
 // Check if the user is logged in
-if (isset($_SESSION['username']) && isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'user') {
-    // Fetch additional user details based on your database structure
-    $username = $_SESSION['username'];
-    // $user_id = $_SESSION['user_id'];
-    $sql = "SELECT * FROM users WHERE username = ?";
-    $stmt = mysqli_prepare($con, $sql);
+if (isset($_SESSION['username']) && isset($_SESSION['user_type'])){
+    if ($_SESSION['user_type'] == 'user') {
+        // Fetch additional user details based on your database structure
+        $username = $_SESSION['username'];
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $stmt = mysqli_prepare($con, $sql);
 
-    if ($stmt) {
-        mysqli_stmt_bind_param($stmt, "s", $username);
-        mysqli_stmt_execute($stmt);
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "s", $username);
+            mysqli_stmt_execute($stmt);
 
-        $result = mysqli_stmt_get_result($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
-        if ($result) {
-            $user_details = mysqli_fetch_assoc($result);
+            if ($result) {
+                $user_details = mysqli_fetch_assoc($result);
 
-            // Display welcome message
-            // echo "Welcome, " . $user_details['username'] . "!";
-            $welcomeMessage = "$username <a href='logout.php'>Logout</a>";
-            echo "<p style='color: red;'>$welcomeMessage</p>";
-            // echo "Welcome, $username! <a href='logout.php'>Logout</a>";
-            // ... (display additional user details if needed)
+                // Display welcome message for user
+                $welcomeMessage = "$username <a href='logout.php'>Logout</a>";
+                echo "<p style='color: red;'>$welcomeMessage</p>";
+                // ... (display additional user details if needed)
+            }
+
+            // Close the statement
+            mysqli_stmt_close($stmt);
         }
-
-        // Close the statement
-        mysqli_stmt_close($stmt);
+    } elseif($_SESSION['user_type'] == 'admin'){
+        // Admin is logged in
+        $admin_username = $_SESSION['username'];
+        // $welcomeMessage = "Welcome, $admin_username";
+        // echo "<p style='color: blue;'>$welcomeMessage</p>";
+        // ... (display additional admin details if needed)
     }
-} else {
+}else {
     // User is not logged in, display other content
-    // echo "Welcome, Guest!";
     $welcomeMessage = "Guest";
-    echo "<p style='color:gray ;'>$welcomeMessage</p>";
+    echo "<p style='color: gray;'>$welcomeMessage</p>";
 }
 ?>
+
 
 

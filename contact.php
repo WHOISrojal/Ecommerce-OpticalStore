@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'cartCount.php';
 ?>
 
 
@@ -17,15 +18,13 @@ session_start();
         <a href="index.php"><img src="image/logo/logo.png" class="logo" alt="This is a logo"></a>
         <div>
             <ul id="navbar">
-                <div class="searchbar">
-                <li id="lg-search"><input type="text" placeholder="Search for products" class="search-box" style="height: 4vh; width: 25vw; padding: 8px; border:none; border-radius: 10px; margin-right: 10px;"><a href="#"><i class="bi bi-search"></i></a></li>
-                </div>
+                <?php include 'searchbtn.php' ?>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="about.php">About us</a></li>
                 <li><a class="active" href="contact.php">Contact</a></li>
                 <!-- <input type="search" id="q" name="q" placeholder="Search in Daraz" class="search-box__input--O34g" tabindex="1" value=""> -->
-                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li>
+                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>($totalCartCount)</p>"; ?>
                 <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>";?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
@@ -84,17 +83,13 @@ session_start();
         <div class="people">
             <div>
                 <img src="image/people/1.png" alt="">
-                <p><span>Ram Bahadur</span>Senior Marketing Manager<br>Phone:091203921<br>Email:ram@gamil.com</p>
+                <p><span>Laxman Maharjan</span>Optician<br>Phone:091203921<br>Email:laxman@gamil.com</p>
             </div>
             <div>
                 <img src="image/people/2.png" alt="">
-                <p><span>Ramesh Chor</span>Manager<br>Phone:091203921<br>Email:ramesh@gamil.com</p>
+                <p><span>Renuka Maharjan</span>Manager<br>Phone:091203921<br>Email:renuka@gamil.com</p>
             </div>
-            <div>
-                <img src="image/people/3.png" alt="">
-                <p><span>Suresh Don</span>Senior Marketing Manager<br>Phone:091203921<br>Email:suresh@gamil.com</p>
-            </div>
-        </div>
+            
     </section>
 
     <?php include 'footer.php' ; ?>
