@@ -31,6 +31,18 @@ if ($productCountResult) {
     // Handle the database query error
     $totalProducts = 0;
 }
+
+// Fetch the total number of orders from the database
+$orderCountQuery = "SELECT COUNT(*) as totalOrders FROM orders";
+$orderCountResult = mysqli_query($con, $orderCountQuery);
+
+if ($orderCountResult) {
+    $orderCountData = mysqli_fetch_assoc($orderCountResult);
+    $totalOrders = $orderCountData['totalOrders'];
+} else {
+    // Handle the database query error
+    $totalOrders = 0;
+}
 mysqli_close($con); // Close the database connection
 ?>
 
@@ -69,7 +81,7 @@ mysqli_close($con); // Close the database connection
             <div class="metric2" data-metric="orders">
             <i class="bi bi-cart-check-fill"></i>
                 <h3 class="metric-label">Total Orders</h3>
-                <span class="metric-number"><?php echo "<p>$totalProducts</p>";?></span>
+                <span class="metric-number"><?php echo "<p>$totalOrders</p>";?></span>
             </div>
         </section>
     </main>

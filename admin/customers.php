@@ -27,7 +27,7 @@ if (!isset($_SESSION['username']) || ($_SESSION['user_type'] !== 'admin' && !$_S
 }
 
 // Fetch items from the users table where user_type is 'user'
-$userQuery = "SELECT user_id, username, fullname, email, address, user_type FROM users WHERE user_type = 'user'";
+$userQuery = "SELECT user_id, username, fullname, email, address, phone FROM users WHERE user_type = 'user'";
 $userResult = mysqli_query($con, $userQuery);
 
 // Check if the query was successful
@@ -44,6 +44,8 @@ if ($userResult) {
     echo '<th>Fullname</th>';
     echo '<th>Email</th>';
     echo '<th>Address</th>';
+    echo '<th>Phone</th>';
+    echo '<th>Actions</th>';
     echo '</tr>';
     echo '</thead>';
     echo '<tbody>';
@@ -59,6 +61,11 @@ if ($userResult) {
         echo '<td>' . $user['fullname'] . '</td>';
         echo '<td>' . $user['email'] . '</td>';
         echo '<td>' . $user['address'] . '</td>';
+        echo '<td>' . $user['phone'] . '</td>';
+        echo "<td>";
+        echo "<a href='edit_customers.php?id={$user['user_id']}'>Edit</a> | ";
+        echo "<a href='delete_customers.php?id={$user['user_id']}'>Delete</a>";
+        echo "</td>";
         echo '</tr>';
     }
 

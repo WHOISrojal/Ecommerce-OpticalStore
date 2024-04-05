@@ -663,9 +663,13 @@ footer .copyright{
 #coupon button,
 #subtotal button{
     background-color: #088178;
-    color: #fff;
+
     padding: 12px 20px;
     border-radius: 5px;
+}
+#subtotal button a{
+    color: #fff;
+    text-decoration: none;
 }
 #subtotal{
     width: 50%;

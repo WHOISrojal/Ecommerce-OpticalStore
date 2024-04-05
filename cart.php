@@ -21,8 +21,7 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] === true) {
     mysqli_stmt_bind_param($cartStmt, "i", $_SESSION['user_id']);
     mysqli_stmt_execute($cartStmt);
     $cartResult = mysqli_stmt_get_result($cartStmt);
-} 
-elseif (isset($_SESSION['temporary_cart']) && !empty($_SESSION['temporary_cart'])) {
+} elseif (isset($_SESSION['temporary_cart']) && !empty($_SESSION['temporary_cart'])) {
     // User is not logged in, but temporary cart exists
     $temporaryCart = $_SESSION['temporary_cart'];
 
@@ -72,8 +71,9 @@ elseif (isset($_SESSION['temporary_cart']) && !empty($_SESSION['temporary_cart']
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="about.php">About us</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li id="lg-bag"><a class="active" href="cart.php"><i class="bi bi-bag-dash"></i></a></li> 
-                <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include 'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>"; ?>
+                <li id="lg-bag"><a class="active" href="cart.php"><i class="bi bi-bag-dash"></i></a></li>
+                <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include 'loggedin.php';
+                                                                                $welcomeMessage = "$username! <a href='logout.php'>Logout</a>"; ?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
         </div>
@@ -105,9 +105,9 @@ elseif (isset($_SESSION['temporary_cart']) && !empty($_SESSION['temporary_cart']
                 if (!empty($cartResult)) {
                     while ($cartItem = mysqli_fetch_assoc($cartResult)) {
                         // Update the total price for the logged-in user
-                         $totalPrice += $cartItem['price'] * $cartItem['quantity'];
-                         $totalItemsLoggedInUser += $cartItem['quantity']; // Update total items count
-                         displayCartItem($cartItem);
+                        $totalPrice += $cartItem['price'] * $cartItem['quantity'];
+                        $totalItemsLoggedInUser += $cartItem['quantity']; // Update total items count
+                        displayCartItem($cartItem);
                     }
                 }
 
@@ -127,12 +127,12 @@ elseif (isset($_SESSION['temporary_cart']) && !empty($_SESSION['temporary_cart']
                     global $totalPrice;
                     $subtotal = $cartItem['price'] * $cartItem['quantity'];
                     echo "<tr>
-                        <td><a href='remove_from_cart.php?id={$cartItem['id']}'><i class='bi bi-x-circle'></i></a></td>
+                        <td><a href='removefromcart.php?id={$cartItem['id']}'><i class='bi bi-x-circle'></i></a></td>
                         <td><img src='{$cartItem['image']}' alt='Product Image'></td>
                         <td>{$cartItem['name']}</td>
-                        <td>\${$cartItem['price']}</td>
+                        <td>Rs. {$cartItem['price']}</td>
                         <td><input type='number' value='{$cartItem['quantity']}'></td>
-                        <td>\${$subtotal}</td>
+                        <td>Rs. {$subtotal}</td>
                     </tr>";
                 }
                 ?>
@@ -140,30 +140,34 @@ elseif (isset($_SESSION['temporary_cart']) && !empty($_SESSION['temporary_cart']
         </table>
     </section>
     <section id="cart-add" class="section-p1">
-    <div id="subtotal">
-        <h3>Cart Totals</h3>
-        <table>
-            <tr>
-                <td>Cart Subtotal</td>
-                <td>Rs. <?php echo number_format($totalPrice, 2); ?></td>
-            </tr>
-            <tr>
-                <td>Shipping cost</td>
-                <td>Free</td>
-            </tr>
-            <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>Rs. <?php echo number_format($totalPrice, 2); ?></strong></td>
-            </tr>
-        </table>
-        <button class="normal">Proceed to Checkout</button>
-        <div class="cart-count">
-        <!-- cart.php ma matrai cartkocount dekhauna lai yo tala ko code use gareko cha ani mathi header ma chai-->
-        <?php $cartCount = "$totalItemsLoggedInUser" + "$totalItemsTemporaryCart";
-        ?>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>Rs. <?php echo number_format($totalPrice, 2); ?></td>
+                </tr>
+                <tr>
+                    <td>Shipping cost</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>Rs. <?php echo number_format($totalPrice, 2); ?></strong></td>
+                </tr>
+            </table>
+
+            <button class="normal">
+                <a href="payment.php?total=<?php echo urlencode($totalPrice); ?>">Pay with Khalti</a>
+            </button>
+
+            <div class="cart-count">
+                <!-- cart.php ma matrai cartkocount dekhauna lai yo tala ko code use gareko cha ani mathi header ma chai-->
+                <?php $cartCount = "$totalItemsLoggedInUser" + "$totalItemsTemporaryCart";
+                ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <?php include 'footer.php'; ?>
 

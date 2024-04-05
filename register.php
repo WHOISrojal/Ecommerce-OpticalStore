@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'connection.php';
 
 //Initialize error message variable
@@ -12,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST["password"];
         $repassword = $_POST["repassword"];
         $address = $_POST["address"];
+        $phone = $_POST["phone"];
 
         // Check if the username already exists
         $check_username_sql = "SELECT * FROM users WHERE username = ?";
@@ -23,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($check_username_result->num_rows > 0) {
             $error_message = "Username already exists. Please choose a different one.";
         }else{
-            if(empty($fullname) || empty($username) || empty($email) || empty($password) || empty($repassword) || empty($address)) {
+            if(empty($fullname) || empty($username) || empty($email) || empty($password) || empty($repassword) || empty($address) || empty($phone)){
             // echo "<script>'alert(Please fill in all the fields.)'</script>";
             $error_message = "Please fill in all the fields";
             // exit();
@@ -36,11 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert the new user if the username is unique
-        $insert_user_sql = "INSERT INTO users (fullname, username, email, password, address) VALUES (?,?,?,?,?)";
+        $insert_user_sql = "INSERT INTO users (fullname, username, email, password, address, phone) VALUES (?,?,?,?,?,?)";
         $insert_user_stmt = $con->prepare($insert_user_sql);
 
         if ($insert_user_stmt) {
-            $insert_user_stmt->bind_param("sssss", $fullname, $username, $email, $hashedPassword, $address);
+            $insert_user_stmt->bind_param("ssssss", $fullname, $username, $email, $hashedPassword, $address, $phone);
             $insert_user_stmt->execute();
 
         if ($insert_user_stmt->affected_rows > 0) {
@@ -90,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="contact.php">Contact</a></li>
                 <!-- <input type="search" id="q" name="q" placeholder="Search in Daraz" class="search-box__input--O34g" tabindex="1" value=""> -->
                 <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li>
-                <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>";?>
+                <li><a class="active" href="login.php"><i class="bi bi-person"></i></a></li><?php include'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>";?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
         </div>
@@ -133,6 +135,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="address">Address</label>
         <input type="text" name="address" required><br>
+
+        <label for="phone">Phone No.</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" required><br>
 
         <input type="submit" value="Register">
     </form>

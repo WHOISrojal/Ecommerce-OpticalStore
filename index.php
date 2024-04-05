@@ -51,18 +51,25 @@ include 'cartCount.php';
     </section>
 
     <section id="feature" class="section-p1">
-        <div class="fe-box">
+    <div class="fe-box">
+        <a href="featureproduct.php?category=eyeglasses">
             <img src="image/features/f1.png" alt="Feature 1">
-            <h6>Eyeglasses</h6>
-        </div>
-        <div class="fe-box">
+        </a>
+        <h6>Eyeglasses</h6>
+    </div>
+    <div class="fe-box">
+        <a href="featureproduct.php?category=sunglasses">
             <img src="image/features/f2.png" alt="Feature 2">
-            <h6>Sunglasses</h6>
-        </div>
-        <div class="fe-box">
+        </a>
+        <h6>Sunglasses</h6>
+    </div>
+    <div class="fe-box">
+        <a href="featureproduct.php?category=lenses">
             <img src="image/features/f3.png" alt="Feature 3">
-            <h6>Lenses</h6>
-        </div>
+        </a>
+        <h6>Lenses</h6>
+    </div>
+
         <!-- <div class="fe-box">
             <img src="image/features/f4.png" alt="Feature 4">
             <h6>Promotions</h6>
@@ -93,7 +100,7 @@ include 'cartCount.php';
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                     </div>
-                    <h4>Rs. 7800</h4>
+                    <h4>Rs. 780</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
@@ -109,7 +116,7 @@ include 'cartCount.php';
                         <i class="bi bi-star"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>Rs. 5000</h4>
+                    <h4>Rs. 500</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
@@ -125,7 +132,7 @@ include 'cartCount.php';
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>Rs. 7500</h4>
+                    <h4>Rs. 750</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
@@ -141,15 +148,15 @@ include 'cartCount.php';
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-half"></i>
                     </div>
-                    <h4>Rs. 9000</h4>
+                    <h4>Rs. 900</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
             <div class="pro">
-                <img src="image/products/f5.jpg" alt="">
+                <img src="image/products/f13.jpg" alt="">
                 <div class="des">
-                    <span>Aviator</span>
-                    <h5>Fashioned Glass</h5>
+                    <span>Prescription</span>
+                    <h5>Glass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -157,15 +164,15 @@ include 'cartCount.php';
                         <i class="bi bi-star"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>Rs. 3000</h4>
+                    <h4>Rs. 300</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
             <div class="pro">
                 <img src="image/products/f6.jpg" alt="">
                 <div class="des">
-                    <span>RayBan</span>
-                    <h5>New Sunglass</h5>
+                    <span>Prescription</span>
+                    <h5>Glass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -173,15 +180,15 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>Rs. 6500</h4>
+                    <h4>Rs. 650</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
             <div class="pro">
-                <img src="image/products/f7.jpg" alt="">
+                <img src="image/products/f114.jpg" alt="">
                 <div class="des">
-                    <span>Gucci</span>
-                    <h5>Rare Sunglass</h5>
+                    <span>Prescription</span>
+                    <h5>Contact Lense</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -189,15 +196,15 @@ include 'cartCount.php';
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>Rs. 12000</h4>
+                    <h4>Rs. 120</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
             <div class="pro">
-                <img src="image/products/f8.jpg" alt="">
+                <img src="image/products/f20.jpg" alt="">
                 <div class="des">
-                    <span>Burberry</span>
-                    <h5>Sunglass</h5>
+                    <span>Prescription</span>
+                    <h5>Glass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -205,7 +212,7 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>Rs. 4500</h4>
+                    <h4>Rs. 450</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
@@ -216,11 +223,11 @@ include 'cartCount.php';
         <h2>New Arrival</h2>
         <!-- <p>Summer Collection New Modern Design</p> -->
         <div class="pro-container">
-            <div class="pro">
-                <img src="image/products/n1.jpg" alt="">
+        <div class="pro">
+                <img src="image/products/f2.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>RayBan</span>
+                    <h5>Sunglass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -228,15 +235,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 700</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n2.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f1.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Swarovski</span>
+                    <h5>Sunglass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -244,15 +250,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 800</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n3.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f18.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Prescription</span>
+                    <h5>Eyeglass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -260,15 +265,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 600</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n4.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f19.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Prescription</span>
+                    <h5>Eyelass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -276,15 +280,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 500</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n5.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f20.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Prescription</span>
+                    <h5>Eyelass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -292,15 +295,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 700</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n6.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f111.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Prescription</span>
+                    <h5>Contact Lense</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -308,15 +310,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 400</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n7.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f112.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Prescription</span>
+                    <h5>Contact Lense</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -324,15 +325,14 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 400</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/n8.jpg" alt="">
+            </div><div class="pro">
+                <img src="image/products/f4.jpg" alt="">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <span>Burberry</span>
+                    <h5>Sunglass</h5>
                     <div class="star">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -340,7 +340,7 @@ include 'cartCount.php';
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs. 600</h4>
                 </div>
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>

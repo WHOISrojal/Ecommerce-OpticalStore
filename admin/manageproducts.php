@@ -35,6 +35,8 @@ if ($result === false) {
         echo "<th class='th-name'>Product Name</th>";
         echo "<th class='th-description'>Description</th>";
         echo "<th class='th-price'>Price</th>";
+        echo "<th class='th-price'>Category</th>";
+        echo "<th class='th-image'>Image</th>";
         echo "<th class='th-actions'>Actions</th>";
         echo "</tr>";
         echo "</thead>";
@@ -46,6 +48,8 @@ if ($result === false) {
             echo '<td>' . $row["name"] . "<br>";
             echo '<td>' . $row["description"] . "<br>";
             echo '<td>' . $row["price"] . "<br>";
+            echo '<td>' . $row["category_name"] . "<br>";
+            echo '<td><img src="../' . $row["image"] . '" alt="Product Image" style="width: 50px; height: 50px;"></td>';
             echo "<td>";
             echo "<a href='update_product.php?action=edit&id=" . $row["id"] . "'>Edit</a> | ";
             echo "<a href='delete_product.php?id=" . $row["id"] . "'>Delete</a><br><br>";

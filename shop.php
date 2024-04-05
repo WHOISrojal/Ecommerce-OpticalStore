@@ -10,7 +10,7 @@ include 'cartCount.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reshmi Optical Center</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -58,14 +58,17 @@ include 'cartCount.php';
             // Display products
             if ($result) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $imagePath = "uploads/" . $row['image'];
+                    $productId = $row['id'];
+                    $imagePath = $row['image'];
                     echo "<div class='pro'>";
+                    echo "<a href='sproduct.php?id=" . $productId . "'>";
                     echo "<img src='" . $imagePath . "' alt='" . $row['name'] . "'>";
+                    echo "</a>";
                     echo "<div class='des'>";
                     echo "<span>" . $row['name'] . "</span>";
                     echo "<h5>" . $row['description'] . "</h5>";
                     echo "<div class='star'></div>";
-                    echo "<h4>$" . $row['price'] . "</h4>";
+                    echo "<h4>Rs. " . $row['price'] . "</h4>";
                     echo "</div>";
                     // echo "<a href='#'><i class='bi bi-bag-dash cart'></i></a>";
                     echo "<a href='addToCart.php?product_id=" . $row['id'] . "'><i class='bi bi-bag-dash cart'></i></a>";
@@ -81,16 +84,16 @@ include 'cartCount.php';
         </div>
     </section>
 
-    <section id="pagination" class="section-p1">
+    <!-- <section id="pagination" class="section-p1">
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#"><i class="bi bi-chevron-right"></i></a>
-    </section>
+    </section> -->
 
     <?php include 'footer.php'; ?>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

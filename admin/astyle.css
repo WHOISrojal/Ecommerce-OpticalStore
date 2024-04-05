@@ -3,15 +3,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
+    box-sizing: border-box;
     background-color: #f2f2f2;
+    scroll-behavior: smooth;
 }
 .main-header {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    z-index: 999;
     background-color: #33D7FD;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06); 
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 .main-header .title a{
     list-style: none;
@@ -21,14 +34,25 @@ body {
     width: 40px;
 } 
 .sidebar {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     float: left;
     width: 15%;
     background-color: #3C4B64;
     border-right: 1px solid #ddd;
     padding: 10px;
-    height: 85vh;
+    height: 85vh; */
+    
+    display: flex;
+    justify-content: left;
+    padding: 20px 80px;
+    float: left;
+    /* width: 15%; */
+    background: #ddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06); 
+    position: sticky;
+    top: 20vh;
+    left: 0;
 }
 .nav-item {
     width: 100%;
@@ -181,6 +205,7 @@ textarea {
 
 .customer-title .customer-tag{
     /* justify-content: center; */
+    /* position: sticky; */
     background-color: #EADACB;
     width: 70vw;
     height: 5vh;

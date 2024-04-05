@@ -68,13 +68,13 @@ include 'cartCount.php';
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d220.7332051277766!2d85.3140715186452!3d27.72558194628648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1705779487683!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>   </section>
 
     <section id="form-details">
-        <form action="">
+        <form action="feedback.php" method="post">
             <span>LEAVE A MEASSAGE</span>
             <h2>We love to hear from you</h2>
-            <input type="text" placeholder="John Doe">
-            <input type="text" placeholder="john@gmail.com">
-            <input type="text" placeholder="Subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            <input type="text" name="name" placeholder="John Doe">
+            <input type="text" name="email" placeholder="john@gmail.com">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
             <div class="sub">
             <input type="submit" name=submit">
         </div>
@@ -88,8 +88,7 @@ include 'cartCount.php';
             <div>
                 <img src="image/people/2.png" alt="">
                 <p><span>Renuka Maharjan</span>Manager<br>Phone:091203921<br>Email:renuka@gamil.com</p>
-            </div>
-            
+            </div>      
     </section>
 
     <?php include 'footer.php' ; ?>

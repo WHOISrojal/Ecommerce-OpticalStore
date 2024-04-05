@@ -16,14 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $description = $_POST["description"];
     $price = $_POST["price"];
+    $category_name = $_POST["category_name"];
 
     // Prepare the SQL statement for updating the product
-    $updateSql = "UPDATE products SET name=?, description=?, price=? WHERE id=?";
+    $updateSql = "UPDATE products SET name=?, description=?, price=?, category_name=? WHERE id=?";
     $updateStmt = $con->prepare($updateSql);
 
     if ($updateStmt) {
         // Bind the parameters
-        $updateStmt->bind_param("ssdi", $name, $description, $price, $id);
+        $updateStmt->bind_param("ssdsi", $name, $description, $price, $category_name, $id);
 
         // Execute the statement
         if ($updateStmt->execute()) {
@@ -82,7 +83,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "Product Name: <input type='text' name='name' value='" . $editRow['name'] . "'><br>";
                     echo "Description: <input type='text' name='description' value='" . $editRow['description'] . "'><br>";
                     echo "Price: <input type='text' name='price' value='" . $editRow['price'] . "'><br>";
-                    echo "<input type='submit' value='Update Product'>";
+                    echo "<label for='category'>Category:</label>";
+                    echo "<select id='category' name='category_name' required>";
+                    echo "<option value='eyeglasses' " . ($editRow['category_name'] == 'eyeglasses' ? 'selected' : '') . ">Eyeglasses</option>";
+                    echo "<option value='sunglasses' " . ($editRow['category_name'] == 'sunglasses' ? 'selected' : '') . ">Sunglasses</option>";
+                    echo "<option value='lenses' " . ($editRow['category_name'] == 'lenses' ? 'selected' : '') . ">Lenses</option>";
+                    echo "</select><br><br>";
+                    echo "<input type='submit' class='submit-btn' value='Update Product'>";
                     echo "</form>";
                     echo"</section>";
                     echo"</main>";
