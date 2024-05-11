@@ -24,7 +24,7 @@ include 'cartCount.php';
                 <li><a href="about.php">About us</a></li>
                 <li><a class="active" href="contact.php">Contact</a></li>
                 <!-- <input type="search" id="q" name="q" placeholder="Search in Daraz" class="search-box__input--O34g" tabindex="1" value=""> -->
-                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>($totalCartCount)</p>"; ?>
+                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>$totalCartCount</p>"; ?>
                 <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>";?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
@@ -82,12 +82,12 @@ include 'cartCount.php';
 
         <div class="people">
             <div>
-                <img src="image/people/1.png" alt="">
-                <p><span>Laxman Maharjan</span>Optician<br>Phone:091203921<br>Email:laxman@gamil.com</p>
+                <img src="image/people/2.png" alt="">
+                <p><span>Laxman Maharjan</span>Optician<br>Phone:091203921<br>Email:laxman@gmail.com</p>
             </div>
             <div>
-                <img src="image/people/2.png" alt="">
-                <p><span>Renuka Maharjan</span>Manager<br>Phone:091203921<br>Email:renuka@gamil.com</p>
+                <img src="image/people/girl.jpg" alt="">
+                <p><span>Renuka Maharjan</span>Manager<br>Phone:091203921<br>Email:renuka@gmail.com</p>
             </div>      
     </section>
 

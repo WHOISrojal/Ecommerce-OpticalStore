@@ -131,7 +131,7 @@ mysqli_stmt_close($stmt);
         </div>
     </section>
 
-    <section id="product1" class="section-p1">
+    <!-- <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
@@ -200,7 +200,7 @@ mysqli_stmt_close($stmt);
                 <a href="#"><i class="bi bi-bag-dash cart"></i></a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <?php include 'footer.php'; ?>
 

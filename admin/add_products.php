@@ -73,6 +73,13 @@ ALTER TABLE tablename AUTO_INCREMENT = 1; -->
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (transaction_id) REFERENCES orders(transaction_id),
     FOREIGN KEY (product_id) REFERENCES products(id)
+
+    after that to delete from order use this:
+    
+    ALTER TABLE receipt
+    ADD CONSTRAINT fk_order_id FOREIGN KEY (order_id)
+    REFERENCES orders(order_id)
+    ON DELETE CASCADE;
 ); -->
 
 

@@ -23,7 +23,7 @@ include 'cartCount.php';
                 <li><a class="active" href="about.php">About us</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <!-- <input type="search" id="q" name="q" placeholder="Search in Daraz" class="search-box__input--O34g" tabindex="1" value=""> -->
-                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>($totalCartCount)</p>"; ?>
+                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>$totalCartCount</p>"; ?>
                 <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include'loggedin.php';$welcomeMessage = "$username! <a style='text-decoration: none;' href='logout.php'>Logout</a>";?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
@@ -35,7 +35,7 @@ include 'cartCount.php';
     </section>
 
     <section id="page-header" class="about-header">
-        <h2>Know us</h2>
+        <h2>Know about us</h2>
         <p>Everything</p>
     </section>
 
@@ -43,18 +43,17 @@ include 'cartCount.php';
         <img src="image/about/a6.jpg" alt="">
         <div>
             <h2>Who are we?</h2>
-            <p>Reshmi Optical Center</p>
-            <abbr title="">Reshmi Optical Center</abbr>
-
+            <p>Reshmi Optical and Cosmetic Center, founded and operated by Mr. Laxman Maharjan, is a distinguished optical shop located in the heart of Sarkari Dhara, Kathmandu. Established in 2076 BS, Reshmi Optical and Cosmetic Center has been a trusted destination for eyewear solutions and cosmetic accessories. We strive to offer a seamless and enjoyable shopping experience, blending expertise in eyewear with a touch of cosmetic elegance.</p>
+            <!-- <p>Reshmi Optical Center</p> -->
+            <!--<abbr title="">Reshmi Optical Center</abbr> -->
             <br>
-
-            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Reshmi Optical Center</marquee>
+            <marquee bgcolor="white" loop="-1" scrollamount="5" width="100%">Reshmi Optical Center</marquee>
         </div>
     </section>
 
     <section id="about-app" class="section-p1">
         <div class="video">
-        <video autoplay loop src="image/about/optical.mp4"></video>
+        <video autoplay loop muted src="image/about/optical.mp4"></video>
         </div>
     </section>
 

@@ -9,10 +9,10 @@
                 <h4>Follow us on</h4>
                 <div class="icon">
                     <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/rose_all_manandhar/"><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-youtube"></i></a>
-                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href="https://github.com/WHOISrojal"><i class="bi bi-github"></i></a>
                 </div>
             </div>
         </div>

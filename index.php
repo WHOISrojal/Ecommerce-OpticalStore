@@ -31,7 +31,7 @@ include 'cartCount.php';
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="about.php">About us</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>($totalCartCount)</p>"; ?>
+                <li id="lg-bag"><a href="cart.php"><i class="bi bi-bag-dash"></i></a></li><?php echo "<p style='margin-top: 10px; margin-left: -20px; color: gray;'>$totalCartCount</p>"; ?>
                 <li><a href="login.php"><i class="bi bi-person"></i></a></li><?php include 'loggedin.php';$welcomeMessage = "$username! <a href='logout.php'>Logout</a>"; ?>
                 <a href="#" id="close"><i class="bi bi-x"></i></a>
             </ul>
@@ -85,265 +85,47 @@ include 'cartCount.php';
     </section>
 
     <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <!-- <p>Summer Collection New Modern Design</p> -->
+        <h2>Featured Product</h2>
         <div class="pro-container">
-            <div class="pro">
-                <img src="image/products/f1.jpg" alt="">
-                <div class="des">
-                    <span>Burberry</span>
-                    <h5>Sun Glasses</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <h4>Rs. 780</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f2.jpg" alt="">
-                <div class="des">
-                    <span>Swarovski</span>
-                    <h5>New Sunglass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 500</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f3.jpg" alt="">
-                <div class="des">
-                    <span>RayBan</span>
-                    <h5>Stylish Sunglass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 750</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f4.jpg" alt="">
-                <div class="des">
-                    <span>Gucci</span>
-                    <h5>Premium Eyewear</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                    </div>
-                    <h4>Rs. 900</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f13.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Glass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 300</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f6.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Glass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 650</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f114.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Contact Lense</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 120</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="image/products/f20.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Glass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 450</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
-        </div>
-    </section>
+            <?php
 
-    <section id="product1" class="section-p1">
-        <h2>New Arrival</h2>
-        <!-- <p>Summer Collection New Modern Design</p> -->
-        <div class="pro-container">
-        <div class="pro">
-                <img src="image/products/f2.jpg" alt="">
-                <div class="des">
-                    <span>RayBan</span>
-                    <h5>Sunglass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 700</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f1.jpg" alt="">
-                <div class="des">
-                    <span>Swarovski</span>
-                    <h5>Sunglass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 800</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f18.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Eyeglass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 600</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f19.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Eyelass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 500</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f20.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Eyelass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 700</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f111.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Contact Lense</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 400</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f112.jpg" alt="">
-                <div class="des">
-                    <span>Prescription</span>
-                    <h5>Contact Lense</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 400</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div><div class="pro">
-                <img src="image/products/f4.jpg" alt="">
-                <div class="des">
-                    <span>Burberry</span>
-                    <h5>Sunglass</h5>
-                    <div class="star">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i>
-                    </div>
-                    <h4>Rs. 600</h4>
-                </div>
-                <a href="#"><i class="bi bi-bag-dash cart"></i></a>
-            </div>
+            // Check if a search term is provided
+            if (isset($_GET['search'])) {
+                $searchTerm = mysqli_real_escape_string($con, $_GET['search']);
+                $sql = "SELECT * FROM products WHERE name LIKE '%$searchTerm%'";
+            } else {
+                // If no search term is provided, fetch all products
+                $sql = "SELECT * FROM products";
+            }
+
+            $result = mysqli_query($con, $sql);
+
+            // Display products
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $productId = $row['id'];
+                    $imagePath = $row['image'];
+                    echo "<div class='pro'>";
+                    echo "<a href='sproduct.php?id=" . $productId . "'>";
+                    echo "<img src='" . $imagePath . "' alt='" . $row['name'] . "'>";
+                    echo "</a>";
+                    echo "<div class='des'>";
+                    echo "<span>" . $row['name'] . "</span>";
+                    echo "<h5>" . $row['description'] . "</h5>";
+                    echo "<div class='star'></div>";
+                    echo "<h4>Rs. " . $row['price'] . "</h4>";
+                    echo "</div>";
+                    // echo "<a href='#'><i class='bi bi-bag-dash cart'></i></a>";
+                    echo "<a href='addToCart.php?product_id=" . $row['id'] . "'><i class='bi bi-bag-dash cart'></i></a>";
+                    echo "</div>";
+                }
+                mysqli_free_result($result);
+            } else {
+                echo "Error: " . mysqli_error($con);
+            }
+
+            mysqli_close($con);
+            ?>
         </div>
     </section>
 

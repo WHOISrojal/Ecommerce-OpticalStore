@@ -139,6 +139,7 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] === true) {
             </tbody>
         </table>
     </section>
+
     <section id="cart-add" class="section-p1">
         <div id="subtotal">
             <h3>Cart Totals</h3>
@@ -166,6 +167,23 @@ if (isset($_SESSION['isloggedin']) && $_SESSION['isloggedin'] === true) {
                 <?php $cartCount = "$totalItemsLoggedInUser" + "$totalItemsTemporaryCart";
                 ?>
             </div>
+            <!-- <button class="normal">
+                <a href="receipt.php">Receipt</a>
+            </button> -->
+
+            <?php
+            // Check if the user is logged in
+            if (isset($_SESSION['isloggedin'])) {
+                echo '<button class="normal">';
+                echo '<a href="receipt.php">Receipt</a>';
+                echo '</button>';
+            } else {
+                // echo '<p>Please log in to view your receipt.</p>';
+                // header("Location: login.php");
+                // exit();
+            }
+            ?>
+
         </div>
     </section>
 
